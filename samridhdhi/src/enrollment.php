@@ -1,7 +1,8 @@
 <?php
-	include "connection.php";
+	
 	try
 	{
+		include "./include/connection.php";
 		$name = $_POST['name'];
 		$dob = $_POST['DOB'];
 		$gender = $_POST['gender'];
@@ -12,8 +13,6 @@
 		$state = $_POST['state'];
 		$family_income = $_POST['family_income'];
 		$relative_name = $_POST['relative_name'];
-		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         // prepare sql and bind parameters
         $sql = "INSERT INTO student (name, dob, gender) VALUES (:name, :dob, :gender)";
     	$stmt = $conn->prepare($sql);
