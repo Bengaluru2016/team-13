@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2016 at 04:02 AM
+-- Generation Time: Jul 10, 2016 at 04:29 AM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -31,6 +31,15 @@ CREATE TABLE IF NOT EXISTS `Access_Role` (
   `Role_Name` varchar(25) NOT NULL,
   PRIMARY KEY (`Role_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Access_Role`
+--
+
+INSERT INTO `Access_Role` (`Role_ID`, `Role_Name`) VALUES
+(1, 'admin'),
+(2, 'teacher'),
+(3, 'communityMobilizer');
 
 -- --------------------------------------------------------
 
@@ -260,6 +269,15 @@ CREATE TABLE IF NOT EXISTS `User` (
   PRIMARY KEY (`Username`),
   KEY `Role_ID` (`Role_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`Username`, `Password`, `Role_ID`) VALUES
+('admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
+('john', 'a51dda7c7ff50b61eaea0444371f4a6a9301e501', 3),
+('joshi', '20a3c5def69de97871449c56aa012c9be2b087d1', 2);
 
 --
 -- Constraints for dumped tables
