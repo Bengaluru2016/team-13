@@ -47,7 +47,7 @@ public class StudentListAdapter extends RecyclerView.Adapter<StudentListAdapter.
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Student current = data.get(position);
-        holder.image.setImageResource(R.drawable.kidoblivion);
+        holder.image.setImageResource(current.id);
 
 //        try {
 //            String uriStr = current.id;

@@ -150,7 +150,7 @@ public class DBStudentsDetail {
                 date = mCursor.getString(mCursor
                         .getColumnIndex(DBStudentsDetail.KEY_DATE_ENROLLED));
 
-                data.add(0, new Student(id,name,dob,gender,father,mother,additional));
+                data.add(0, new Student(0,name,dob,gender,father,mother,additional));
 
             } while (mCursor.moveToNext());
         }

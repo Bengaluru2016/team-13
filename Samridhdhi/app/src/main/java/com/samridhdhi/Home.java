@@ -55,11 +55,11 @@ public class Home extends AppCompatActivity
             }
         });
 
-        data.add(new Student("is","Pari","gen","abc","father","mother","add"));
-        data.add(new Student("is","Gopal","gen","abc","father","mother","add"));
-        data.add(new Student("is","Harish","gen","abc","father","mother","add"));
-        data.add(new Student("is","Shreesha","gen","abc","father","mother","add"));
-        data.add(new Student("is","Abhimanyu","gen","abc","father","mother","add"));
+        data.add(new Student(R.drawable.kidoblivion,"Pari","gen","abc","father","mother","add"));
+        data.add(new Student(R.drawable.abhinav,"Abhinav","gen","abc","father","mother","add"));
+        data.add(new Student(R.drawable.kartik,"Karthik","gen","abc","father","mother","add"));
+        data.add(new Student(R.drawable.meethi,"Meethi","gen","abc","father","mother","add"));
+        data.add(new Student(R.drawable.anushka,"Anushka","gen","abc","father","mother","add"));
 
 
         recyclerView = (RecyclerView) findViewById(R.id.studentListRecycler);
