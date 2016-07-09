@@ -3,7 +3,7 @@
 	//server name
 	$servername="localhost";
 	//Database Name
-	$dbname = "myDB";
+	$dbname = "cfg";
 	//mysql username
 	$username = "root";
 	//mysql password
