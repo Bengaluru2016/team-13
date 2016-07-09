@@ -9,8 +9,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.3"
-        
+        android:alpha="0.1"
+        android:scaleType="centerCrop"
         android:src="@drawable/loginhome"/>
 
     <ScrollView
@@ -22,13 +22,13 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_gravity="center"
+            android:layout_marginRight="64dp"
+            android:layout_marginLeft="64dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_marginRight="32dp"
-                android:layout_marginLeft="32dp"
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
@@ -44,9 +44,7 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_marginRight="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginLeft="32dp"
                 android:layout_height="wrap_content">
 
                 <EditText
@@ -70,7 +68,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_gravity="right"
-                android:layout_marginRight="32dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
@@ -82,6 +79,7 @@
     <ProgressBar
         android:id="@+id/login_progress"
         style="?android:attr/progressBarStyleLarge"
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
