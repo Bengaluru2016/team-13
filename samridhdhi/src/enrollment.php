@@ -3,11 +3,11 @@
 	try
 	{
 		// including the connection script
-		include "./include/connection.php";
+		include "connection.php";
 		//Receiving values from the enrollment form
-		$name = $_POST['name'];
+		$name = $_POST['sname'];
 		$dob = $_POST['DOB'];
-		$gender = $_POST['gender'];
+		$gender = "M";
 		$student_mobile = $_POST['student_mobile'];
 		$relative_mobile = $_POST['relative_mobile'];
 		$pincode = $_POST['pincode'];
