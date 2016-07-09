@@ -233,7 +233,7 @@ CREATE TABLE `Student` (
   `DOB` date NOT NULL,
   `Enrolled` tinyint(1) NOT NULL,
   `Gender` char(1) NOT NULL,
-  `School_ID` int(10) NOT NULL,
+  `School_ID` int(10) DEFAULT NULL,
   `Photo_URL` varchar(50) NOT NULL,
   PRIMARY KEY (`Student_ID`),
   KEY `School_ID` (`School_ID`),
@@ -390,4 +390,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-09 18:32:53
+-- Dump completed on 2016-07-09 19:00:29
