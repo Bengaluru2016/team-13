@@ -52,7 +52,7 @@
             $stmt->execute();
             // login id is stored in $user_id 
             $user_id = $stmt->fetchColumn(0);
-            // role is stored in $rolew 
+            // role is stored in $role
             $role = $stmt->fetchColumn(1);
             // if we have no result then login Failed 
             if($user_id == false)
