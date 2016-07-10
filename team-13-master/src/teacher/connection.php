@@ -2,9 +2,9 @@
 	//server name
 	$servername="localhost";
 	//Database Name
-	$dbname = "CFG";
+	$dbname = "cfg";
 	//mysql username
 	$username = "root";
 	//mysql password
-	$password = "saurabh@3295";
+	$password = "root";
 ?>

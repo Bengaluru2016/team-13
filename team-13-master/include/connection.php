@@ -1,7 +1,7 @@
 <!-- This script is used to Connect to Database-->
 <?php
 	//server name
-	$servername="localhost";
+	$servername="ec2-54-169-122-182.ap-southeast-1.compute.amazonaws.com";
 	//Database Name
 	$dbname = "cfg";
 	//mysql username
