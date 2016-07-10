@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>Samridhdhi</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="http://samridhdhi.org/">Samridhdhi</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="visual.html">Data Visualization</a></li>
+                <li class="active"><a href="enrollment.html">Enroll</a></li>
+                <li><a href="#">Success Stories</a></li> 
+                <li><a href="#">Partners</a></li> 
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome, Data Admin</a></li>
+                <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">    
+        <form class="form-horizontal" role="form" method="post" action="enrollment.php">
+            <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Student Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="sname" placeholder="Enter name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="DOB">DOB:</label>
+            <div class="col-sm-10"> 
+              <input type="text" class="form-control" id="DOB" name="DOB" placeholder="Enter date of birth">
+            </div>
+          </div>
+          <div class="form-group">
+             <label class="control-label col-sm-2" for="gender">Gender:</label> 
+            <label class="radio-inline">
+              <input type="radio" name="gender" value="M">Male
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" value="F">Female
+            </label>
+            </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="student_mobile">Student Mobile:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="student_mobile" name="student_mobile" placeholder="Enter student mobile number">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="relative_mobile">Relative Contact Number:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="relative_mobile" name="relative_mobile" placeholder="Enter relative mobile number">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pincode">Pincode:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter pin code">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="city">City:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="city" name="city" placeholder="Enter city">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="state">State:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="state" name="state" placeholder="Enter State">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="family_income">Family Income:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="family_income" placeholder="Enter family income">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="relative_name">Relative Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="relative_name" placeholder="Enter relative name">
+            </div>
+          </div>  
+          <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+    </div>
+</body>
+</html>
