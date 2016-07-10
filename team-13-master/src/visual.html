@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -20,11 +19,9 @@
             font-size: 13px;
         }
     </style>
-
 </head>
-
 <body>
-<nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -47,103 +44,95 @@
             </ul>
         </div>
     </nav>
-<div class="container">
-
-
-<div id="pieChart" align="center">
-
-<script src="new.min.js"></script>
-<script src="d3pie.min.js"></script>
-<script>
-    var pie = new d3pie("pieChart", {
-        "header": {
-            "title": {
-                "text": "Student Turn out rate",
-                "fontSize": 24,
-                "font": "open sans"
-            },
-            "subtitle": {
-                "text": "A full pie chart depicting the percentage of students enrolled compared to the number of students enrolled.",
-                "color": "#999999",
-                "fontSize": 12,
-                "font": "open sans"
-            },
-            "titleSubtitlePadding": 9
-        },
-        "footer": {
-            "color": "#999999",
-            "fontSize": 10,
-            "font": "open sans",
-            "location": "bottom-left"
-        },
-        "size": {
-            "canvasWidth": 590,
-            "pieOuterRadius": "110%"
-        },
-        "data": {
-            "sortOrder": "value-desc",
-            "content": [
-
-                {
-                    "label": "Percentage-enrolled",
-                    "value": 44445,
-                    "color": "#248838"
+    <div id="pieChart" align="center">
+    <script src="new.min.js"></script>
+    <script src="d3pie.min.js"></script>
+    <script>
+        var pie = new d3pie("pieChart", {
+            "header": {
+                "title": {
+                    "text": "Student Turn out rate",
+                    "fontSize": 24,
+                    "font": "open sans"
                 },
+                "subtitle": {
+                    "text": "A full pie chart depicting the percentage of students enrolled compared to the number of students enrolled.",
+                    "color": "#999999",
+                    "fontSize": 12,
+                    "font": "open sans"
+                },
+                "titleSubtitlePadding": 9
+            },
+            "footer": {
+                "color": "#999999",
+                "fontSize": 10,
+                "font": "open sans",
+                "location": "bottom-left"
+            },
+            "size": {
+                "canvasWidth": 590,
+                "pieOuterRadius": "110%"
+            },
+            "data": {
+                "sortOrder": "value-desc",
+                "content": [
 
-                {
-                    "label" : "Remaining-percentage",
-                    "value" : 3333,
-                    "color" :"#e2331"
+                    {
+                        "label": "Percentage-enrolled",
+                        "value": 44445,
+                        "color": "#248838"
+                    },
+
+                    {
+                        "label" : "Remaining-percentage",
+                        "value" : 3333,
+                        "color" :"#e2331"
+                    }
+                ]
+            },
+            "labels": {
+                "outer": {
+                    "pieDistance": 32
+                },
+                "inner": {
+                    "hideWhenLessThanPercentage": 3
+                },
+                "mainLabel": {
+                    "fontSize": 11
+                },
+                "percentage": {
+                    "color": "#ffffff",
+                    "decimalPlaces": 0
+                },
+                "value": {
+                    "color": "#adadad",
+                    "fontSize": 11
+                },
+                "lines": {
+                    "enabled": true
+                },
+                "truncation": {
+                    "enabled": true
                 }
-            ]
-        },
-        "labels": {
-            "outer": {
-                "pieDistance": 32
-            },
-            "inner": {
-                "hideWhenLessThanPercentage": 3
-            },
-            "mainLabel": {
-                "fontSize": 11
-            },
-            "percentage": {
-                "color": "#ffffff",
-                "decimalPlaces": 0
-            },
-            "value": {
-                "color": "#adadad",
-                "fontSize": 11
-            },
-            "lines": {
-                "enabled": true
-            },
-            "truncation": {
-                "enabled": true
-            }
 
-        },
-        "effects": {
-            "pullOutSegmentOnClick": {
-                "effect": "linear",
-                "speed": 400,
-                "size": 8
+            },
+            "effects": {
+                "pullOutSegmentOnClick": {
+                    "effect": "linear",
+                    "speed": 400,
+                    "size": 8
+                }
+            },
+            "misc": {
+                "gradient": {
+                    "enabled": true,
+                    "percentage": 100
+                }
             }
-        },
-        "misc": {
-            "gradient": {
-                "enabled": true,
-                "percentage": 100
-            }
-        }
-    });
-</script>
-</div>
-
-<div class="container">
-
+        });
+    </script>
+    <div class="container">
     <div class="jumbotron">
-
         <svg id="visualisation" width="1000" height="500"></svg>
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script>
