@@ -21,6 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +77,7 @@ public class Home extends AppCompatActivity
             @Override
             public void onTouchEvent(RecyclerView rv, MotionEvent e) {
                 Log.d("asd","asdad");
+                Toast.makeText(Home.this,"asdasd",Toast.LENGTH_SHORT).show();
 
             }
 

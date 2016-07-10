@@ -17,9 +17,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         students.append(["name":"Pari", "age": 1,"progress":85])
         students.append(["name":"Abhinav", "age": 2, "progress":65])
-        students.append(["name":"Kartik", "age": 3, "progress":65])
-        students.append(["name":"Meethi", "age": 4, "progress":65])
-        students.append(["name":"Anushka", "age": 5, "progress":65])
+        students.append(["name":"Kartik", "age": 3, "progress":74])
+        students.append(["name":"Meethi", "age": 4, "progress":61])
+        students.append(["name":"Anushka", "age": 5, "progress":88])
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
