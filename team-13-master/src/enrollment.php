@@ -3,9 +3,9 @@
 	try
 	{
 		// including the connection script
-		include "./include/connection.php";
+		include "../include/connection.php";
 		//Receiving values from the enrollment form
-		$name = $_POST['name'];
+		$name = $_POST['sname'];
 		$dob = $_POST['DOB'];
 		$gender = $_POST['gender'];
 		$student_mobile = $_POST['student_mobile'];
@@ -41,10 +41,10 @@
 	    $stmt->bindParam(':mobile',$relative_mobile);
 	    //execute the statement
 	    $stmt->execute();
-	    $sql = "INSERT INTO student_contact_details (student_id,mobile,pincode,city,state) VALUES (:mobile,:pincode,:city,:state)";
+	    $sql = "INSERT INTO student_contact_details (student_id,mobile,pincode,city,state) VALUES (:student_id,:mobile,:pincode,:city,:state)";
 	    // prepare query statement and bind the parameters
 	    $stmt = $conn->prepare($sql);
-	    $stmt->bindParam(':student_id',$student_id)
+	    $stmt->bindParam(':student_id',$student_id);
 	    $stmt->bindParam(':mobile', $student_mobile);
 	    $stmt->bindParam(':pincode',$pincode);
 	    $stmt->bindParam(':city',$city);
@@ -59,9 +59,11 @@
 	    $stmt->bindParam(':document_id',$document_id);
 	    //execute the statement
 	    $stmt->execute();
+	    echo "Insert Successful";
+	    header('Location:enrollment.html');
 	}
 	catch(PDOException $e)
 	{
-		echo "Error: " . $e->getMessage();
+		echo "Error: " . $e->getMessage().$sql;
 	}
 ?>

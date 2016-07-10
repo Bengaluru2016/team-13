@@ -12,23 +12,7 @@
     {
         echo 'Please enter a valid email and password';
     }
-    /*// check the username is the correct length 
-    elseif (strlen( $_POST['username']) > 50 || strlen($_POST['username']) < 3)
-    {
-        echo 'Incorrect Length for Username';
-    }
-    // check the password is the correct length 
-    elseif (strlen( $_POST['password']) > 20 || strlen($_POST['password']) < 4)
-    {
-       echo 'Incorrect Length for Password';
-    }
-    // check the password has only alpha numeric characters 
-    elseif (ctype_alnum($_POST['password']) != true)
-    {
-            // if there is no match 
-            echo "Password must be alpha numeric";
-    }
-    else*/
+    else
     {
         // if we are here the data is valid and we can insert it into database 
         $user = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
@@ -66,11 +50,11 @@
                 $_SESSION['user_id'] = $user_id;
                 if($role == 1)
                 {
-                    include 'visual.html';
+                    header('Location:visual.html');
                 }
                 else if($role == 2)
                 {
-                    include '/teacher/home.php';
+                    header('Location:/teacher/home.php');
                 }
             }
         }
